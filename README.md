@@ -26,7 +26,7 @@ npm install postcss-px2rem
 项目 public 目录下新建 rem.js
 
 ```javascript
-const baseSize = 32  // 基准大小(不做更改)
+const baseSize = 16  // 页面默认字体大小(不做更改)
 // 设置 rem 函数
 function setRem() {
   // 当前页面宽度相对于 375 宽的缩放比例，可根据自己需要修改。
@@ -50,7 +50,7 @@ vue3.0 将项目配置划到 vue.config.js 这个文件里，更加直观，没�
 const px2rem = require('postcss-px2rem')
 
 const postcss = px2rem({
-  remUnit: 32   //基准大小 baseSize，需要和rem.js中相同(不做更改)
+  remUnit: 16   //基准大小 baseSize，需要和rem.js中相同(不做更改)
 })
 
 module.exports = {
@@ -89,7 +89,7 @@ new Vue({
 
 ```
 
-**注：在页面中需要自适应屏幕的地方，都要注明宽高（包括字体大小，图片宽高）**
+**注：在页面中需要自适应屏幕的地方，都要使用尺寸来约束如，注明宽高、注明位置（包括字体大小，图片宽高）**
 
 这样，加载页面的时候，vue项目的配置会自动将 px 转化为 rem 为单位，自适应设备屏幕大小
 
