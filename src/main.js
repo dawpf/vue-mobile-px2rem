@@ -5,6 +5,13 @@ import store from "./store";
 
 Vue.config.productionTip = false;
 
+// 项目启动时，加载自适应配置
+(function () {
+  var rem = document.createElement('script');
+  rem.src = './rem.js';
+  document.body.appendChild(rem)
+})()
+
 new Vue({
   router,
   store,
